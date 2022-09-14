@@ -13,4 +13,4 @@ api.key="KEY"
 ![](files/img_4.png)
 ![](files/img_3.png)
 
-![Video](files/video.webm)
+![Video](files/video.webm?raw=true)
