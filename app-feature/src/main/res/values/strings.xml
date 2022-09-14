@@ -1,0 +1,14 @@
+<resources>
+    <string name="login">Login</string>
+    <string name="message_login">Please sing in to continue.</string>
+    <string name="login_or_email">Login or email</string>
+    <string name="password">Password</string>
+    <string name="trailer">Trailer</string>
+    <string name="download">Download</string>
+    <string name="share">Share</string>
+    <string name="trending_movie">Trending movie</string>
+    <string name="logout">Logout</string>
+    <string name="logout_description">Are you sure you want to logout?</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+</resources>
