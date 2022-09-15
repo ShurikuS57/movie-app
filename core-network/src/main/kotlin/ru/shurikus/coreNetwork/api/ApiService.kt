@@ -1,5 +1,6 @@
 package ru.shurikus.coreNetwork.api
 
+import retrofit2.Response
 import retrofit2.http.*
 import ru.shurikus.coreNetwork.models.request.LoginRequest
 import ru.shurikus.coreNetwork.models.response.MovieDetailsResponse
@@ -18,5 +19,5 @@ internal interface ApiService {
     suspend fun requestTrendingMoviesPage(@Query("page") page: Int): MoviesTrendingResponse
 
     @GET("movie/{movie_id}")
-    suspend fun requestMovieDetails(@Path("movie_id") id: Int): MovieDetailsResponse
+    suspend fun requestMovieDetails(@Path("movie_id") id: Int): Response<MovieDetailsResponse>
 }

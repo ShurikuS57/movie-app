@@ -5,8 +5,9 @@ import ru.shurikus.coreNetwork.models.entities.MovieEntity
 import ru.shurikus.coreNetwork.models.response.MoviesTrendingResponse
 import kotlin.math.roundToInt
 
-internal class MoviesMapper {
-    fun toDomain(response: MoviesTrendingResponse): List<MovieEntity> {
+internal class MoviesMapper: Mapper<MoviesTrendingResponse, List<MovieEntity>> {
+
+    override fun toDomain(response: MoviesTrendingResponse): List<MovieEntity> {
         val list = arrayListOf<MovieEntity>()
         response.results.forEach {
             list.add(prepareMovie(it))

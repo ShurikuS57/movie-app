@@ -8,6 +8,7 @@ import ru.shurikus.core.models.ErrorType
 import ru.shurikus.coreNetwork.api.ApiService
 import ru.shurikus.coreNetwork.models.RepoResult
 import ru.shurikus.coreNetwork.models.request.LoginRequest
+import ru.shurikus.coreNetwork.utils.ThrowableHandler
 import ru.shurikus.corePreferences.PrefKeys
 import ru.shurikus.corePreferences.repositories.PrefsRepository
 
@@ -59,10 +60,7 @@ internal class AuthRepositoryImpl constructor(
                         ))
                     }
                 } else {
-                    RepoResult.Error(ErrorEntity(
-                        errorType = ErrorType.Response,
-                        message = "Login error"
-                    ))
+                    ThrowableHandler.network(throwable)
                 }
             }
         }

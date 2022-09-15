@@ -4,8 +4,8 @@ import ru.shurikus.core.Const
 import ru.shurikus.coreNetwork.models.entities.MovieDetailsEntity
 import ru.shurikus.coreNetwork.models.response.MovieDetailsResponse
 
-internal class MovieDetailsMapper {
-    fun toDomain(response: MovieDetailsResponse): MovieDetailsEntity {
+internal class MovieDetailsMapper: Mapper<MovieDetailsResponse, MovieDetailsEntity> {
+    override fun toDomain(response: MovieDetailsResponse): MovieDetailsEntity {
         val title = response.title
         val description = response.overview
         val backgroundImageUrl = Const.IMAGE_URL + response.backdropPath
